@@ -1,0 +1,135 @@
+/* Imports
+   ========================================================================== */
+
+/**
+ * Import Third-Party CSS
+ */
+
+@import "base/imports";
+
+/**
+ * Import Base CSS
+ */
+
+@import "base/variables";
+@import "base/fonts";
+
+
+
+/**
+ * Set Base Styles
+ */
+
+html, body {
+    font-family: $base-font-family-montserrat;
+    background: $base-bg-light;
+}
+
+.navbar {
+    background: $base-bg-light;
+    @include box-shadow(0 3px 7px rgba($base-primary, .10));
+
+    .navbar-menu{
+        background: $base-bg-light;
+    }
+
+    .navbar-item .navbar-link, a.navbar-item, .navbar-dropdown a.navbar-item {
+        color: $base-primary;
+
+        &:hover {
+            color: $base-accent !important;
+        }
+
+        &.is-active {
+            color: $base-secondary !important;
+
+            &:hover {
+                color: $base-accent !important;
+            }
+        }
+    }
+
+    .navbar-brand {
+        .navbar-item {
+            display: grid;
+            span{
+                color: $base-primary !important;
+                font-family: $base-font-family-roboto;
+                font-size: 1.5em;
+            }
+            &:hover {
+                color: $base-primary !important;
+            }
+        }
+    }
+}
+
+.button.is-base {
+    text-transform: uppercase;
+    background: $base-primary;
+    color: set-text-color($base-primary);
+    border-radius: 3px;
+    transition: 0.3s;
+
+    &:hover {
+        background: $base-accent;
+        color: set-text-color($base-accent);
+    }
+}
+
+.greeting {
+    position: relative;
+    z-index: 1;
+}
+
+.fit-content {
+    width: 100%;
+    height: 100%;
+}
+
+.fit-content {
+    .column:has(.greeting) {
+        width: max-content;
+    }
+}
+
+
+.absolute {
+    position: absolute;
+}
+
+.is-vhcentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-body {
+    .subtitle {
+        font-size: 100%;
+    }
+}
+
+
+.image {
+    img {
+        max-width: max-content;
+        float: right;
+        filter: drop-shadow(0 3px 7px rgba($base-secondary, .12));
+        width: 85%;
+        height: auto;
+    }
+
+    svg {
+
+        path {
+            fill: rgba($base-primary, .65);
+        }
+    }
+}
+
+.has-ratio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}

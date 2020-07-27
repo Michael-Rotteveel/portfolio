@@ -1,0 +1,31 @@
+@function colors($color) {
+    @if ($color == red) {
+        $list: (#DB222A, #A82027, #FA5058);
+        @return $list;
+    }
+    @if ($color == yellow) {
+        $list: (#EBB00E, #9C7305, #FFBE0B);
+        @return $list;
+    }
+    @if ($color == orange) {
+        $list: (#FF4500, #BF360C, #FF8A65);
+        @return $list;
+    }
+    @if ($color == blue) {
+        $list: (#2074FA, #0949B0, #3A86FF);
+        @return $list;
+    }
+    @if ($color == green) {
+        $list: (#1AA80A, #114D0A, #1CDB07);
+        @return $list;
+    }
+}
+
+
+@function set-text-color($backround) {
+    @if (lightness($backround) > 50) {
+        @return #14110F; // Lighter backgorund, return dark color
+    } @else {
+        @return #FFFFFA; // Darker background, return light color
+    }
+}

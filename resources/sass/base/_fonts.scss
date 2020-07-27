@@ -1,0 +1,88 @@
+/* Imports
+   ========================================================================== */
+
+/**
+ * Import Base Fonts
+ */
+
+//@import url('https://fonts.googleapis.com/css2?.scss');
+//@import url('https://fonts.googleapis.com/css2');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@700&display=swap');
+
+
+/* Typography
+   ========================================================================== */
+
+/**
+ * Font Family Montserrat
+ */
+
+$base-font-family-montserrat: 'Montserrat', sans-serif;
+
+/**
+ * Font Family Roboto
+ */
+
+$base-font-family-roboto: 'Roboto', sans-serif;
+
+/**
+ * Font Weights
+ */
+
+
+.wght-100{
+    font-weight: 100 !important;
+}
+
+.wght-200{
+    font-weight: 200 !important;
+}
+
+.wght-300{
+    font-weight: 300 !important;
+}
+
+.wght-400{
+    font-weight: 400 !important;
+}
+
+.wght-500{
+    font-weight: 500 !important;
+}
+
+.wght-600{
+    font-weight: 600 !important;
+}
+
+.wght-700{
+    font-weight: 700 !important;
+}
+
+.wght-800{
+    font-weight: 800 !important;
+}
+
+.wght-900{
+    font-weight: 900 !important;
+}
+
+.wght-bold{
+    font-weight: bold !important;
+}
+
+.wght-bolder{
+    font-weight: bolder !important;
+}
+
+.wght-lighter{
+    font-weight: lighter !important;
+}
+
+.wght-normal{
+    font-weight: normal !important;
+}
