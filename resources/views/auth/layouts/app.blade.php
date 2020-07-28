@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang={{ str_replace('_', '-', app()->getLocale()) }}>
+<html class="is-admin" lang={{ str_replace('_', '-', app()->getLocale()) }}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,10 +9,12 @@
     <title>Michael Rotteveel | @yield('title')</title>
 </head>
 <body class="has-navbar-fixed-top">
-@include('components.public-navbar')
-<main class="container">
+@include('components.admin-navbar')
+@include('components.admin-sidebar')
+<main class="column is-9">
     @yield('content')
 </main>
+</div>
 <script src={{asset('js/app.js')}}></script>
 </body>
 </html>

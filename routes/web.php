@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'LandingController@index');
-Route::get('/{slug}', 'LandingController@show');
+Route::get('/', 'PageController@index');
+Route::get('/login', 'LoginController@showLoginForm');
+Route::get('/register', 'RegisterController@showRegistrationForm');
+Route::get('/{slug}', 'PageController@show');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'Auth\AuthPageController@index');

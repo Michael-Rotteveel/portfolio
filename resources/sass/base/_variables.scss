@@ -13,7 +13,7 @@ $base-bg-light: #FFFFFA;
 /**
  * Base Background Dark
  */
-$base-bg-dark: #14110F;
+$base-bg-dark: #0f1014;
 
 /**
  * Set Base Colors
@@ -24,3 +24,4 @@ $base-colors: colors(red);
 $base-primary: nth($base-colors, 1);
 $base-secondary: nth($base-colors, 2);
 $base-accent: nth($base-colors, 3);
+

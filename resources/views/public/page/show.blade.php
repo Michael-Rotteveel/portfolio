@@ -1,6 +1,12 @@
-
-@extends('public.layouts.app')
-@section('title', 'home')
+@switch($page->type_id)
+    @case(2)
+    @extends('auth.layouts.app')
+    @section('title', $page->name)
+    @break
+    @default
+    @extends('public.layouts.app')
+    @section('title', $page->name)
+@endswitch
 @foreach($page->content as $pageContent)
 @section('content')
     <section class="hero is-fullheight-with-navbar">

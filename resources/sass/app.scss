@@ -15,21 +15,88 @@
 @import "base/fonts";
 
 
-
 /**
  * Set Base Styles
  */
+
 
 html, body {
     font-family: $base-font-family-montserrat;
     background: $base-bg-light;
 }
 
+.is-admin {
+    $base-colors: colors(blue);
+
+    $base-primary: nth($base-colors, 1);
+    $base-secondary: nth($base-colors, 2);
+    $base-accent: nth($base-colors, 3);
+
+    background: darken($base-secondary, 30%) !important;
+
+    body{
+        background: darken($base-secondary, 30%) !important;
+
+        &.has-navbar-fixed-top{
+            padding-top: 6.5rem !important;
+        }
+    }
+    .columns{
+        margin-bottom: 0;
+        .column.is-3{
+            background: aliceblue !important;
+            padding-left: 1.5rem;
+            min-height: calc(100vh - 6rem);
+        }
+    }
+
+    .navbar {
+        background: darken($base-secondary, 25%) !important;
+        @include box-shadow(0 3px 7px rgba($base-primary, .10));
+
+        .navbar-menu {
+            background: darken($base-secondary, 25%) !important;
+
+            .navbar-item .navbar-link, a.navbar-item, .navbar-dropdown a.navbar-item {
+                color: set-text-color(darken($base-secondary, 25%));
+
+                &:hover {
+                    color: $base-accent !important;
+                }
+
+                &.is-active {
+                    color: $base-primary !important;
+
+                    &:hover {
+                        color: $base-accent !important;
+                    }
+                }
+            }
+        }
+
+        .navbar-brand {
+            .navbar-item {
+                display: grid;
+
+                span {
+                    color: $base-primary !important;
+                    font-family: $base-font-family-roboto;
+                    font-size: 1.5em;
+                }
+
+                &:hover {
+                    color: $base-primary !important;
+                }
+            }
+        }
+    }
+}
+
 .navbar {
     background: $base-bg-light;
     @include box-shadow(0 3px 7px rgba($base-primary, .10));
 
-    .navbar-menu{
+    .navbar-menu {
         background: $base-bg-light;
     }
 
@@ -52,11 +119,13 @@ html, body {
     .navbar-brand {
         .navbar-item {
             display: grid;
-            span{
+
+            span {
                 color: $base-primary !important;
                 font-family: $base-font-family-roboto;
                 font-size: 1.5em;
             }
+
             &:hover {
                 color: $base-primary !important;
             }
@@ -128,8 +197,8 @@ html, body {
     }
 }
 
-.has-ratio{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.has-ratio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

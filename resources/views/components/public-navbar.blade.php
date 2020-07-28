@@ -13,8 +13,8 @@
     <div id="navbarToggle" class="navbar-menu">
         <div class="navbar-start">
             @foreach($pages as $page)
-                @if($page->type_id == true && $page->in_nav == true && $page->name != 'Blog')
-                    <a class="navbar-item" href="{{$page->slug}}">
+                @if($page->type_id == 1 && $page->in_nav == 1 && $page->name != 'Blog')
+                    <a class="navbar-item" href="#{{$page->slug}}">
                         {{$page->name}}
                     </a>
                 @endif
@@ -22,7 +22,7 @@
         </div>
         <div class="navbar-end">
             <div class="navbar-item">
-                <a href="#" class="button is-base">{{$pages['Blog']->name}}</a>
+                <a href="{{$pages['Blog']->name}}" class="button is-base">{{$pages['Blog']->name}}</a>
             </div>
         </div>
     </div>
