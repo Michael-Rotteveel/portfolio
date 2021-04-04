@@ -15,7 +15,7 @@
         "@creativebulma/bulma-divider": "^1.1.0",
         "@creativebulma/bulma-tagsinput": "^1.0.2",
         "@creativebulma/bulma-tooltip": "^1.2.0",
-        "axios": "^0.19",
+        "axios": "^0.21",
         "bulma-calendar": "^6.0.9",
         "bulma-timeline": "^3.0.4",
         "cross-env": "^7.0",
